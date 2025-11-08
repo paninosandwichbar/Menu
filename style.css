@@ -1,0 +1,162 @@
+*{
+  --color-green:#a3b18a;
+  --bg-menu:#ced6c0;
+  --color-green-hover:#68994e;
+  --color-softlory:#faf3e0;
+}
+body {
+    direction: rtl;
+}
+
+#navbar , #home{
+    display: flex;
+    text-align: centere;
+    justify-content: space-between;
+    background:transparent;
+    border: 2px sloid rgba(255, 255, 255, 2.);
+    backdrop-filter: blur(30px);
+}
+
+#nav-span{
+  font-size:x-large;
+  font-weight: 600;
+}
+
+#home{
+  background:transparent;
+  border: 2px sloid rgba(255, 255, 255, 2.);
+  backdrop-filter: blur(5px);
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  border-radius: 40px;
+  padding: 3rem;
+}
+
+#websit-key{
+  background-color: var(--color-green);
+  color: black;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+#websit-key:hover{
+  background-color: var(--color-green-hover);
+  color: black;
+}
+
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('img/21150f7827c98a2c3bfae36b69eebbb4.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--color-softlory);
+    
+}
+
+#menu , #contact{
+  background-color: var(--bg-menu);
+}
+
+
+.tab-btn {
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-btn:hover {
+  background-color: #ffe8cc;
+}
+
+.tab-btn.active {
+  background-color: #d97706;
+  color: white;
+}
+
+.tab-content {
+  transition: opacity 0.5s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu-header{
+      display: flex;
+      text-align: centere;
+      background: var(--color-softlory);
+      border: 2px sloid rgba(255, 255, 255, 2.);
+      backdrop-filter: blur(20px);
+      padding: 1rem;
+}
+
+.menu-header a{
+  display: grid;
+}
+
+.menu-item {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-green );
+  backdrop-filter: blur(80px);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in; /* 🔹 سریع‌تر برای محو شدن */
+}
+
+.menu-item:hover .menu-overlay {
+    opacity: 1;
+}
+
+.menu-overlay {
+    transition: all 0.3s ease;
+}
+
+
+.menu-item.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out; /* 🔹 نرم‌تر برای ظاهر شدن */
+}
+
+/* overlay fade */
+.menu-overlay {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.menu-item.show .menu-overlay {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.menu-header{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#about{
+  background-color: var(--color-softlory);
+  color: var(--color-green-hover);
+}
+
+/* #about-img {
+  width: ;
+  height: ;
+
+} */
+
+
+#form {
+  background-color: var(--color-softlory);
+}
+
+footer {
+    background-color: black;
+}

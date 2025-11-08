@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>panino</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <i class="text-amber-800"></i>
+                    <span class="font-semibold text-gray-900 text-lg">PANINO</span>
+                </div>
+                <div id="nav-key" class="hidden md:flex space-x-8">
+                    <a href="#menu" class="font-semibold text-gray-900 text-lg">منو</a>
+                    <a href="#about" class="font-semibold text-gray-900 text-lg">درباره ما</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-200 focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <!-- <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
+            <a href="#menu" class="block py-2 text-gray-600 hover:text-amber-800 transition">منو</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-amber-800 transition">درباره ما</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-amber-800 transition">ارتباط با ما</a>
+        </div> -->
+    </nav>
+
+    <!-- home section -->
+    <section class="hero-bg h-screen flex items-center justify-center text-white pt-16">
+        <div id="home" class="text-center px-4" data-aos="fade-up">
+            <h1 class="text-3xl md:text-6xl font-bold mb-4">ساندویچ‌ بار پانینو</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Infinite taste in every bite <br> (بینهایت مزه
+                در هر گاز)</p>
+            </p>
+            <a href="#menu" id="websit-key" class=" py-3 px-8 rounded-full transition duration-300 inline-block">مشاهده
+                منو</a>
+        </div>
+    </section>
+    <!-- mini web sit -->
+
+    <!-- menu-header -->
+    <!-- <section class="menu-header">
+        <a href="#menu" id="websit-key" class="font-bold py-3 px-8 rounded-full transition duration-300 inline-block">مشاهده منو</a>
+    </section> -->
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">منو</h2>
+                <div class=" flex justify-center space-x-4">
+                    <button id="websit-key"
+                        class=" py-3 px-8 rounded-full transition duration-300 inline-block tab-btn active"
+                        data-target="sandwiches">ساندویچ‌ </button>
+                    <button id="websit-key" class=" py-3 px-8 rounded-full transition duration-300 inline-block tab-btn"
+                        data-target="drinks">نوشیدنی‌</button>
+                </div>
+            </div>
+
+            <!-- ساندویچ -->
+            <div id="sandwiches" class="tab-content grid md:grid-cols-3 gap-8">
+                <div class="menu-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/10" alt="Sandwich"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">پانینو بوقلمون</h3>
+                        <p>سینه بوقلمون فراوری شده (120g)+ دیپ پسته کرانچی + پنیر گدا + گوجه خشک مزه دار شده + ریحان
+                            ایتالیایی</p>
+                        <span class="font-bold block mt-2">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/10" alt="Chicken"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">پانینو مرغ</h3>
+                        <p>سینه مرغ گریل شده(110g) + دیپ آووکادو + پنیر موزارلا + گوجه خشک مزه دار شده + روکولا</p>
+                        <span class="font-bold block mt-2">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/10" alt="Beef" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">پانینو گوشت</h3>
+                        <p>پولد بیف(120g) + سس گریوی و قارچ + بلوچیز + گوجه خشک مزه دار شده + روکولا</p>
+                        <span class="font-bold block mt-2">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/10" alt="Beef" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">پانینو ژامبون</h3>
+                        <p>ژامبون گوشت%95 (110g) + مربا انجیر + پنیر امنتالر + مایونز دستساز + روکولا</p>
+                        <span class="font-bold block mt-2">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/10" alt="Beef" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">پانینو سالامی</h3>
+                        <p>سالامی(120g) + دیپ زیتون و هالوپینو + روکولا + عسل طبیعی</p>
+                        <span class="font-bold block mt-2">$3.50</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- نوشیدنی -->
+            <div id="drinks" class="tab-content hidden grid md:grid-cols-3 gap-8">
+                <div class="menu-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/10" alt="Lemonade"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">لیموناد</h3>
+                        <span class="font-bold block mt-2">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/10" alt="Mojito" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">موهیتو</h3>
+                        <span class="font-bold block mt-2">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/10" alt="Mix Berry"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">میکس بری</h3>
+                        <p>(توت فرنگی ، رزبری ، بلوبری) ترکیب بری</p>
+                        <span class="font-bold block mt-2">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/10" alt="Mix Berry"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">میکس سیتروس</h3>
+                        <p>(پرتقال ، لیمو ، لیچی لمون) میکس مرکبات</p>
+                        <span class="font-bold block mt-2">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/10" alt="Mix Berry"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">میکس کولادا</h3>
+                        <p>(نارگیل ، آناناس) ترکیب میوه های استوایی</p>
+                        <span class="font-bold block mt-2">$3.50</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
+                    <img id="about-img" src="img/IMG_1083.PNG" alt="photos" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">داستان ما</h2>
+                    <p class="text-gray-700 mb-4">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
+                        مورد نیاز، و
+                    </p>
+                    <div class="flex space-x-4">
+                        <div id="degree-obtained" class="flex items-center">
+                            <i id="icon" class='bx bx-award bx-tada bx-flip-vertical'></i>
+                            <span class="text-gray-700">لورم ایپسوم</span>
+                        </div>
+                        <div id="degree-obtained" class="flex items-center">
+                            <i id="icon" class='bx bxs-heart bx-burst'></i>
+                            <span class="text-gray-700">لورم ایپسوم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">از ما دیدن کنید</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div data-aos="fade-right">
+                    <div id="form" class=" p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">اطلاعات تماس</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-feather="map-pin" class="text-amber-800 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">آدرس</h4>
+                                    <p class="text-gray-700">نیاوران خیابان شهید باهنر نرسیده به همایون فر جنب بانک
+                                        گردشگری پ۳۳۷</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="clock" class="text-amber-800 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">ساعات کاری</h4>
+                                    <p class="text-gray-700">...............</p>
+                                    <p class="text-gray-700">...............</p>
+                                    <p class="text-gray-700">...............</p>
+                                    <p class="text-gray-700">...............</p>
+                                    <p class="text-gray-700">...............</p>
+                                    <p class="text-gray-700">...............</p>
+                                    <p class="text-gray-700">...............</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="phone" class="text-amber-800 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">تلفن</h4>
+                                    <p class="text-gray-700">021-22750759</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i></i>
+                        <span class="font-bold text-xl">PANINO</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam excepturi corporis eos deserunt
+                        ipsa officiis reiciendis? Dicta quos asperiores mollitia, illum in, iste enim cumque deleniti
+                        distinctio officiis explicabo consectetur!
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-amber-500 transition">Home</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-amber-500 transition">Menu</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-amber-500 transition">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-amber-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-amber-500 transition">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500 transition">
+                            <i data-feather="instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500 transition">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; Lorem ipsum dolor sit..</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
