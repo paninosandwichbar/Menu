@@ -22,6 +22,10 @@ body {
   font-weight: 600;
 }
 
+#nav-key{
+  margin: 1rem;
+}
+
 #home{
   background:transparent;
   border: 2px sloid rgba(255, 255, 255, 2.);
@@ -145,13 +149,6 @@ body {
   background-color: var(--color-softlory);
   color: var(--color-green-hover);
 }
-
-/* #about-img {
-  width: ;
-  height: ;
-
-} */
-
 
 #form {
   background-color: var(--color-softlory);
