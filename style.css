@@ -51,7 +51,7 @@ body {
 }
 
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('img/21150f7827c98a2c3bfae36b69eebbb4.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('img/21150f7827c98a2c3bfae36b69eebbb4.webp');
     background-size: cover;
     background-position: center;
     color: var(--color-softlory);
