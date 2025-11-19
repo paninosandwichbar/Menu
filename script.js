@@ -17,17 +17,17 @@ const items = document.querySelectorAll('.menu-item');
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+      if (entry.intersectionRatio >= 0.3) {
         // وقتی آیتم وارد دید میشه
         entry.target.classList.add('show');
-      } else {
+      } else if (entry.intersectionRatio === 0) {
         // وقتی از دید خارج میشه (اسکرول به بالا)
         entry.target.classList.remove('show');
       }
     });
   },
   {
-    threshold: 0.2 // حداقل ۲۰٪ از آیتم دیده بشه تا افکت اجرا شه
+    threshold: [0, 0.3, 1] // حداقل ۲۰٪ از آیتم دیده بشه تا افکت اجرا شه
   }
 );
 
